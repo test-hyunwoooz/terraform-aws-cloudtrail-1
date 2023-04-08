@@ -25,7 +25,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
         run:
-          echo "$secrets.SEMANTIC_RELEASE_TOKEN"
+          echo "$GITHUB_TOKEN"
       - name: semantic-release
         uses: cycjimmy/semantic-release-action@v3
         with:
