@@ -19,6 +19,13 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
+      - name: echo-env
+        shell:
+          bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
+        run:
+          echo "$secrets.SEMANTIC_RELEASE_TOKEN"
       - name: semantic-release
         uses: cycjimmy/semantic-release-action@v3
         with:
@@ -28,3 +35,5 @@ jobs:
               conventional-changelog-conventionalcommits@4.6.3
         env:
           GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
+        run:
+          echo "$secrets.SEMANTIC_RELEASE_TOKEN"
