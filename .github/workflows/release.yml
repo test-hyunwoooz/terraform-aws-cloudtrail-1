@@ -1,5 +1,5 @@
 name: semantic-release
-
+# test
 on:
   workflow_dispatch:
   push:
