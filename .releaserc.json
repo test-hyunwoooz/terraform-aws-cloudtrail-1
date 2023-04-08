@@ -2,7 +2,6 @@
   "branches": [
     "main"
   ],
-  "repositoryUrl": "https://github.com/aws-ss/terraform-aws-cloudtrail.git",
   "ci": false,
   "plugins": [
     [
